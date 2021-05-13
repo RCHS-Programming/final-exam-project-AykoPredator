@@ -19,6 +19,7 @@ public class Sheep extends Actor
         checkCollision();
         checkKeyPress();
         detectWallCollision();
+        checkCollisionWin();
     }    
     
         public void checkKeyPress()
