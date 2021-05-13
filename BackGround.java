@@ -26,6 +26,8 @@ public class BackGround extends World
         addObject(new Wall(),100,50);
         addObject(new Wall(),100,500);
         addObject(new Wall(),100,550);
+        addObject(new Wall(),550,600);
+        addObject(new Wall(),350,600);
         for (int i = 0; i < 4; i++){
             addObject(new Wall(), 350, 50 +100*i);
         }
@@ -36,6 +38,9 @@ public class BackGround extends World
         for(int i = 0; i < 2; i++)
         {
             addObject( new Spider(), 450, 10 + 300*i);
+        }
+        for (int i = 0; i < 4; i++){
+            addObject(new Wall(), 550, 50 +100*i);
         }
     }
 }
