@@ -28,6 +28,7 @@ public class BackGround extends World
         addObject(new Wall(),100,550);
         addObject(new Wall(),550,600);
         addObject(new Wall(),350,600);
+        addObject(new Barn(),762,27);
         for (int i = 0; i < 4; i++){
             addObject(new Wall(), 350, 50 +100*i);
         }

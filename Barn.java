@@ -14,6 +14,6 @@ public class Barn extends Actor
      */
     public void act() 
     {
-        
+         
     }    
 }
