@@ -8,18 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Sheep extends Actor
 {
-    public boolean isUpPress;
-    public boolean isDownPress;
-    public boolean isRightPress;
-    public boolean isLeftPress;
     
-    public Sheep()
-    {
-        isUpPress = false;
-        isDownPress = false;
-        isRightPress = false;
-        isLeftPress = false;
-    }
     
     /**
      * Act - do whatever the Frog wants to do. This method is called whenever
@@ -27,73 +16,45 @@ public class Sheep extends Actor
      */
     public void act() 
     {
-        keyJump();
         checkCollision();
+        checkKeyPress();
+        detectWallCollision();
     }    
     
-    public void keyJump()
+        public void checkKeyPress()
     {
-        //Check for the up key
-        if( isUpPress == false && Greenfoot.isKeyDown("up") && getY() > 60)
+        if( Greenfoot.isKeyDown("up") )
         {
-            setLocation( getX() , getY() - 60);
-            isUpPress = true;
+            setLocation( getX(), getY() - 5);
         }
         
-        if( isUpPress && !Greenfoot.isKeyDown("up"))
+        if( Greenfoot.isKeyDown("down") )
         {
-            isUpPress = false;
+            setLocation( getX(), getY() + 5);
+        }
+
+        if( Greenfoot.isKeyDown("right") )
+        {
+            setLocation( getX() + 5, getY() );
         }
         
-        //Check for the down key
-        if( isDownPress == false && Greenfoot.isKeyDown("down") && getY() < 540)
+        if( Greenfoot.isKeyDown("left") )
         {
-            setLocation( getX() , getY() + 60);
-            isDownPress = true;
+            setLocation( getX() - 5, getY() );
         }
-        
-        if( isDownPress && !Greenfoot.isKeyDown("down"))
-        {
-            isDownPress = false;
-        }        
-        
-        
-        
-        //Check for the right key
-         if( isRightPress == false && Greenfoot.isKeyDown("right") && getY() < 540)
-        {
-            setLocation( getX() + 60 , getY());
-            isRightPress = true;
-        }
-        
-        if( isRightPress && !Greenfoot.isKeyDown("right"))
-        {
-            isRightPress = false;
-        }         
-        
-        
-        
-        //Check for the left key
-        if( isLeftPress == false && Greenfoot.isKeyDown("left") && getY() < 540)
-        {
-            setLocation( getX()  - 60 , getY());
-            isLeftPress = true;
-        }
-        
-        if( isLeftPress && !Greenfoot.isKeyDown("left"))
-        {
-            isLeftPress = false;
-        }          
-        
-        
-        
+    }
+   public void detectWallCollision(){ 
+    if(isTouching(Wall.class))
+    {
+        setLocation(50,300);
+    }
     }
     
     public void checkCollision()
     {
         if(isTouching(Snake.class) || isTouching(Spider.class))
         {
-            setLocation(370, 510);
+            setLocation(50, 300);
         }
     }
 }
