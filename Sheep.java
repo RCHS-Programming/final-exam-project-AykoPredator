@@ -61,7 +61,7 @@ public class Sheep extends Actor
     {
         if(isTouching(Barn.class))
         {
-            
+            Greenfoot.playSound("yipee.wav");
             setLocation(50, 300);
         }
     }
