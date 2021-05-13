@@ -57,4 +57,12 @@ public class Sheep extends Actor
             setLocation(50, 300);
         }
     }
+    public void checkCollisionWin()
+    {
+        if(isTouching(Barn.class))
+        {
+            
+            setLocation(50, 300);
+        }
+    }
 }
