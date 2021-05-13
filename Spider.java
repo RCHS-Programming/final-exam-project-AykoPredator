@@ -14,7 +14,7 @@ public class Spider extends Actor
      */
     public void act() 
     {
-        setLocation( getX(), getY() + 10);
+        setLocation( getX(), getY() + 8);
         if(isAtEdge())
         {
             setLocation( getX(), 0);

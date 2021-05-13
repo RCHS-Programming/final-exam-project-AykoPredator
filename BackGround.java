@@ -33,5 +33,9 @@ public class BackGround extends World
         {
             addObject( new Snake(), 225, 10 + 200*i);
         }
+        for(int i = 0; i < 2; i++)
+        {
+            addObject( new Spider(), 450, 10 + 300*i);
+        }
     }
 }
