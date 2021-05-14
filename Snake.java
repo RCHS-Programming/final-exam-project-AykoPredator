@@ -26,7 +26,7 @@ public class Snake extends Actor
         setLocation( getX(), getY() + speed);
         if(isAtEdge())
         {
-            setLocation( getX(), wallcordy);
+            setLocation( wallcordx, wallcordy);
         }  
     }    
 }
