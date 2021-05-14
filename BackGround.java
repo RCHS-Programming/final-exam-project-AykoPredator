@@ -29,16 +29,17 @@ public class BackGround extends World
         addObject(new Wall(),550,600);
         addObject(new Wall(),350,600);
         addObject(new Barn(),762,27);
+        addObject(new Spider(-13, 600, 650), 650, 10);
         for (int i = 0; i < 4; i++){
             addObject(new Wall(), 350, 50 +100*i);
         }
         for(int i = 0; i < 3; i++)
         {
-            addObject( new Snake(), 225, 10 + 200*i);
+            addObject( new Snake(5, 0, 225), 225, 10 + 200*i);
         }
         for(int i = 0; i < 2; i++)
         {
-            addObject( new Spider(), 450, 10 + 300*i);
+            addObject( new Spider(8, 0, 450), 450, 10 + 300*i);
         }
         for (int i = 0; i < 4; i++){
             addObject(new Wall(), 550, 50 +100*i);
