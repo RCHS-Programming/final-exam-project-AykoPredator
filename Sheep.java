@@ -7,9 +7,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Sheep extends Actor
-{
-    
-    
+    {
+    public int lives = 3;
     /**
      * Act - do whatever the Frog wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -19,7 +18,9 @@ public class Sheep extends Actor
         checkCollision();
         checkKeyPress();
         detectWallCollision();
+        checkCollisionLevel2();
         checkCollisionWin();
+        checkifLose();
     }    
     
         public void checkKeyPress()
@@ -48,6 +49,7 @@ public class Sheep extends Actor
     if(isTouching(Wall.class))
     {
         setLocation(50,300);
+        lives = lives - 1;
     }
     }
     
@@ -56,15 +58,31 @@ public class Sheep extends Actor
         if(isTouching(Snake.class) || isTouching(Spider.class))
         {
             setLocation(50, 300);
+            lives = lives - 1;
         }
     }
-    public void checkCollisionWin()
+    public void checkCollisionLevel2()
     {
         if(isTouching(Barn.class))
         {
             Greenfoot.playSound("yipee.wav");
             Greenfoot.setWorld(new World2());
             setLocation(50, 300);
+        }
+    }
+    public void checkCollisionWin()
+    {
+        if(isTouching(Barn2.class))
+        {
+            Greenfoot.playSound("yipee.wav");
+            Greenfoot.setWorld(new WinScreen());
+        }
+    }
+    public void checkifLose()
+    {
+        if(lives < 1)
+        {
+           Greenfoot.setWorld(new Lose());
         }
     }
 }
