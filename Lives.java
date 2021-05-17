@@ -18,7 +18,6 @@ public class Lives extends Actor
        checkifLose();
        setImage(new  GreenfootImage("Lives: " + livesleft , 40,Color.WHITE, null));
     }  
-    
     public void minuslives()
     {
         livesleft = livesleft - 1;

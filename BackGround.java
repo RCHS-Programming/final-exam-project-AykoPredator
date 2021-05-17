@@ -30,6 +30,7 @@ public class BackGround extends World
         addObject(new Wall(),350,600);
         addObject(new Barn(),762,27);
         addObject(new Spider(-13, 600, 650), 650, 10);
+        addObject(new Lives(), 100, 40);
         for (int i = 0; i < 4; i++){
             addObject(new Wall(), 350, 50 +100*i);
         }
