@@ -60,19 +60,28 @@ dependency6.type=UsesDependency
 dependency7.from=World2
 dependency7.to=Sheep
 dependency7.type=UsesDependency
+<<<<<<< Updated upstream
 dependency8.from=World2
 dependency8.to=Wall
 dependency8.type=UsesDependency
 dependency9.from=World2
 dependency9.to=Barn2
 dependency9.type=UsesDependency
+=======
+>>>>>>> Stashed changes
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
+<<<<<<< Updated upstream
 height=1056
 package.numDependencies=19
 package.numTargets=12
+=======
+height=910
+package.numDependencies=7
+package.numTargets=6
+>>>>>>> Stashed changes
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -172,7 +181,14 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< Updated upstream
 width=1936
 world.lastInstantiated=BackGround
 xPosition=0
 yPosition=0
+=======
+width=1061
+world.lastInstantiated=BackGround
+xPosition=1703
+yPosition=702
+>>>>>>> Stashed changes
